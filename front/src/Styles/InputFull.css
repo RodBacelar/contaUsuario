@@ -37,16 +37,22 @@
 
 .inputFull:focus-within label {
     transform: translateY(-125%);
-    font-size: .75rem;
+    font-size: .85rem;
 }
 
 .inputFull .labelPreen {
     transform: translateY(-125%);
-    font-size: .75rem;
+    font-size: .85rem;
 }
 
 .inputFull p {
     margin: 0px 3px;
     font-size: 0.8rem;
     color: red;
+}
+
+box-icon {
+    position: absolute;
+    top: 4px;
+    left: 220px;
 }

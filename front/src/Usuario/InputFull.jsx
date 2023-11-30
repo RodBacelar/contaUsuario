@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import '../Styles/InputFull.css'
+import 'boxicons';
 
-export default function InputFull({id, label, type, textErro = ''}) {
+export default function InputFull({id, label, type, textErro = '', icon}) {
 
     const [preenchido, setPreenchido] = useState(false);
     const [erroInput, setErroInput] = useState(false);
@@ -23,8 +24,16 @@ export default function InputFull({id, label, type, textErro = ''}) {
             />
             <label className={ preenchido ? 'labelPreen' : ''}
                 htmlFor={id}
-            >{label}</label>
+            >
+                {label}
+                <box-icon 
+                    type="solid" 
+                    name={icon}
+                    color={erroInput ? 'red' : preenchido ? 'lightgreen' : '#999'}
+                ></box-icon>
+            </label>
             <p>{textErro}</p>
+            <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
         </div>
     )
 }

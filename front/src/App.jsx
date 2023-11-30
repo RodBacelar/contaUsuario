@@ -10,19 +10,21 @@ function App() {
         id='username' 
         label='Username'
         type='text'
-        textErro='Aconteceu um Erro'
+        icon='user'
       />
 
       <InputFull 
         id='email' 
         label='Email' 
         type='text'
+        icon='envelope'
       />
 
       <InputFull 
         id='senha' 
         label='Senha' 
         type='password'
+        icon='lock-alt'
       />
     </>
   )
