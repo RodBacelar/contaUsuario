@@ -59,6 +59,15 @@ body {
     margin: 0;
 }
 
+.painelAlternador h1 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.painelAlternador hr {
+    width: 100%;
+}
+
 .direito {
     left: 0;
     opacity: 0;

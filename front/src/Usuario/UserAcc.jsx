@@ -18,6 +18,7 @@ export default function UserAcc() {
             <div className="painelAlternador esquerdo">
                 <div className="metade">
                     <h1>Bem Vindo</h1>
+                    <hr />
                 </div>
                 <div className="metade">
                     <h3>Não possui uma conta?</h3>
@@ -28,7 +29,7 @@ export default function UserAcc() {
             <div className="painelAlternador direito">
                 <h3>Possui uma conta?</h3>
                 <p>Acesse sua conta com suas informações pessoais</p>
-                <button onClick={alternar} className="btnAlt">Login</button>
+                <button onClick={alternar} className="btnAlt">Acessar Conta</button>
             </div>
         </div>
     )

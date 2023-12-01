@@ -19,6 +19,11 @@
     border: none;
     border-bottom: 2px solid #e5e5e5;
     transition: border-color 150ms ease-out;
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px #fff inset;
+        -webkit-text-fill-color: black;
+    }
 }
 
 .inputFull label {
