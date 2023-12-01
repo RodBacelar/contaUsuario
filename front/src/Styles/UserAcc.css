@@ -23,13 +23,13 @@ body {
 }
 
 .container .login {
-    left: 0;
+    right: 0;
     width: 50%;
     z-index: 2;
 }
 
 .container .create {
-    left: 0;
+    right: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
@@ -52,37 +52,52 @@ body {
     box-sizing: border-box;
 }
 
-.esquerdo {
-    right: 0;
+.painelAlternador p {
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.direito {
+    left: 0;
     opacity: 0;
     z-index: 1;
 }
 
-.direito {
-    right: 0;
+.esquerdo {
+    left: 0;
     z-index: 2;
 }
 
+.metade {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .container.ativCreate .login {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
     z-index: 1;
 }
 
 .container.ativCreate .create {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 2;
-}
-
-.container.ativCreate .esquerdo {
     transform: translateX(-100%);
     opacity: 1;
     z-index: 2;
 }
 
 .container.ativCreate .direito {
-    transform: translateX(-100%);
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 2;
+}
+
+.container.ativCreate .esquerdo {
+    transform: translateX(100%);
     opacity: 0;
     z-index: 1;
 }
@@ -95,10 +110,13 @@ button {
 }
 
 .btnAlt {
+    margin-top: 30px;
     background-color: white;
     color: blue;
-}
 
-.btnAlt:hover {
-    border-color: #fff;
+    &:focus {
+        outline: none;
+        transform: scale(0.95);
+    }
+
 }

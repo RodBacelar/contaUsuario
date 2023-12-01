@@ -15,4 +15,13 @@
 .btnSubmit {
     margin: 55px 45px;
     background-color: blue;
+
+    &:hover {
+        border-color: white;
+    }
+
+    &:focus {
+        transform: scale(0.95);
+        outline: none;
+    }
 }

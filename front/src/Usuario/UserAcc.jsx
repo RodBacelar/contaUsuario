@@ -16,14 +16,19 @@ export default function UserAcc() {
             <Login/>
             <Create/>
             <div className="painelAlternador esquerdo">
-                <h2>Possui uma conta?</h2>
-                <p>Faça Login com suas informações</p>
-                <button onClick={alternar} className="btnAlt">Login</button>
+                <div className="metade">
+                    <h1>Bem Vindo</h1>
+                </div>
+                <div className="metade">
+                    <h3>Não possui uma conta?</h3>
+                    <p>Crie uma conta com suas informações pessoais</p>
+                    <button onClick={alternar} className="btnAlt">Criar Conta</button>   
+                </div>   
             </div>
             <div className="painelAlternador direito">
-                <h2>Bem Vindo</h2>
-                    <p>Faça Login com seu email e senha</p>
-                    <button onClick={alternar} className="btnAlt">Criar Conta</button>   
+                <h3>Possui uma conta?</h3>
+                <p>Acesse sua conta com suas informações pessoais</p>
+                <button onClick={alternar} className="btnAlt">Login</button>
             </div>
         </div>
     )

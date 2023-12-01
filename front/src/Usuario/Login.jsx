@@ -54,7 +54,7 @@ export default function Login() {
     
     return(
         <form onSubmit={handleSubmit(submitLogin)} className="login">
-            <h2>Faça Login</h2>
+            <h2>Acesse sua Conta</h2>
 
             <InputFull 
                 id='emailLogin' 
