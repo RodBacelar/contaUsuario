@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e8ecef;
+}
+
+.container {
+    color: black;
+
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 650px;
+}
+
+.container form {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 600ms ease-in-out;
+}
+
+.container .login {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container .create {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.containerAlter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 600ms ease-in-out;
+    z-index: 1000;
+}
+
+.alternador {
+    background-color: blue;
+    height: 100%;
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translate(0);
+    transition: all 600ms ease-in-out;
+    top: 0;
+    transform: translateX(0);
+    transition: all 600ms ease-in-out;
+}
+
+.painelAlternador {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.esquerdo {
+    transform: translate(-200%);
+}
+
+.direito {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.ativo .login {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.container.ativo .create {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 600ms;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.container.ativo .containerAlter {
+    transform: translateX(-100%);
+}
+
+
+.container.ativo .alternador {
+    transform: translateX(50%);
+}
+
+.container.ativo .esquerdo {
+    transform: translateX(0);
+}
+
+.container.ativo .direito {
+    transform: translateX(200%);
+}
+
+
+button {
+    padding: 15px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btnAlt {
+    background-color: white;
+    color: blue;
+}
+
+.btnAlt:hover {
+    border-color: #fff;
+}

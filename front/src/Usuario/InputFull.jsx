@@ -34,7 +34,7 @@ export default function InputFull({id, label, type, textErro = '', icon, registe
                     color={textErro ? 'red' : preenchido ? 'lightgreen' : '#999'}
                 ></box-icon>
             </label>
-            <p>{textErro}</p>
+            <p className='erro'>{textErro}</p>
             <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
         </div>
     )
