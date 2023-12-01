@@ -28,10 +28,19 @@ const schemaCreate = Yup.object().shape({
 export default function Create() {
     
     const { register, handleSubmit, formState: { errors }, reset } = useForm({resolver: yupResolver(schemaCreate)});
+    
+    const [userMsg, setUserMsg] = useState();
+    const [emailExist, setEmailExist] = useState();
 
     const submitCreate = async (data) => {
-        console.log(data);
-        reset();
+        try {
+            const response = await axios.post("http://localhost:3000/createUser", data);
+            setUserMsg(response.data);
+            setEmailExist();
+            reset();
+        } catch (error) {
+            setEmailExist(error.response.data);
+        }
     }
     
     return (
@@ -52,7 +61,7 @@ export default function Create() {
                 type='text'
                 icon='envelope'
                 register={register}
-                textErro={errors.email?.message}
+                textErro={errors.email?.message || emailExist}
             />
 
             <InputFull 
@@ -72,6 +81,8 @@ export default function Create() {
                 register={register}
                 textErro={errors.confSenha?.message}
             />
+
+            <p className="sucessMsg">{userMsg}</p>
 
             <button className="btnSubmit">Cadastrar</button>
         </form>

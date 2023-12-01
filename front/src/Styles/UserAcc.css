@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: #e8ecef;
 }
@@ -24,6 +18,8 @@ body {
     top: 0;
     height: 100%;
     transition: all 600ms ease-in-out;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container .login {
@@ -49,9 +45,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 30px;
     border-radius: 30px;
     transition: all 600ms ease-in-out;
+    margin: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 
 .esquerdo {
