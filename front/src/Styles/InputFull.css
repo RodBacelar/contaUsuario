@@ -33,16 +33,19 @@
     background-color: transparent;
     z-index: 10;
     transition: transform 200ms ease-out, font-size 200ms ease-out;
+    cursor: text;
 }
 
 .inputFull:focus-within label {
     transform: translateY(-125%);
     font-size: .85rem;
+    cursor: default;
 }
 
 .inputFull .labelPreen {
     transform: translateY(-125%);
     font-size: .85rem;
+    cursor: default;
 }
 
 .inputFull p {
