@@ -12,23 +12,18 @@ export default function UserAcc() {
     }
 
     return (
-        <div className={ativo ? 'container ativo' : 'container'}>
+        <div className={ativo ? 'container ativCreate' : 'container'}>
             <Login/>
             <Create/>
-            <div className="containerAlter">
-                <div className="alternador">
-                    <div className="painelAlternador esquerdo">
-                        <h2>Possui uma conta?</h2>
-                        <p>Faça Login com suas informações</p>
-                        <button onClick={alternar} className="btnAlt">Login</button>
-                    </div>
-                    <div className="painelAlternador direito">
-                    <h2>Bem Vindo</h2>
-                        <p>Faça Login com seu email e senha</p>
-                        <button onClick={alternar} className="btnAlt">Criar Conta</button>
-                    </div>
-                </div>
-
+            <div className="painelAlternador esquerdo">
+                <h2>Possui uma conta?</h2>
+                <p>Faça Login com suas informações</p>
+                <button onClick={alternar} className="btnAlt">Login</button>
+            </div>
+            <div className="painelAlternador direito">
+                <h2>Bem Vindo</h2>
+                    <p>Faça Login com seu email e senha</p>
+                    <button onClick={alternar} className="btnAlt">Criar Conta</button>   
             </div>
         </div>
     )
