@@ -67,9 +67,8 @@ app.post('/login', async (req, res) => {
             }
             return res.status(422).send("Senha incorreta");
         }
-        return res.status(409).send("Email não encontrado. Crie uma conta!");
     }
-
+    return res.status(409).send("Email não encontrado. Crie uma conta!");
 });
 
 // Rotas Privadas
